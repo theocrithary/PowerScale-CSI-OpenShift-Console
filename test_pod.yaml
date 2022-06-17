@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: isilontestpod1
+  namespace: test
+spec:
+  containers:
+  - name: test
+    image: docker.io/centos:latest
+    command: [ "/bin/sleep", "3600" ]
+    volumeMounts:
+    - name: pvol0
+      mountPath: "/data0"
+  volumes:
+    - name: pvol0
+      persistentVolumeClaim:
+        claimName: pvol0

@@ -1,0 +1,8 @@
+isilonClusters:
+  - clusterName: "######"
+    username: "admin"
+    password: "#########"
+    endpoint: "#########"
+    isDefault: true
+    skipCertificateValidation: true
+    isiPath: "/ifs/data/csi"
