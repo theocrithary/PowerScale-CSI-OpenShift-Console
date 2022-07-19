@@ -1,5 +1,8 @@
 # PowerScale-CSI-OpenShift-Console
 
+## Youtube video:
+- https://youtu.be/ChpasqwvGTo
+
 ## Create a new project
 - e.g. isilon
 
@@ -93,4 +96,4 @@ ls -al
 
 # Check the snapshot was created successfully
 
-# Login to the PowerScale and confirm the volume / snapshot
+### Login to the PowerScale and confirm the volume / snapshot
