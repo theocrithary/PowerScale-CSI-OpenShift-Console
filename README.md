@@ -1,22 +1,29 @@
 # PowerScale-CSI-OpenShift-Console
 
-## Create a new namespace
+## Create a new project
 - e.g. isilon
 
 ## Create isilon-creds secret
-- use the isilon-creds.yaml file included in this repo as reference
-- edit with your environment details (e.g. endpoint, username, password)
+- ensure the new project 'isilon' is selected when creating the new secrets
+- create a new key/value secret with the secret name = isilon-creds and key = config
+- use the isilon-creds.yaml file included in this repo as reference and paste into the text field
+- edit with your environment details (e.g. endpoint IP address, username, password)
 
 ## Create isilon-certs secret
-- use the isilon-certs.yaml file included in this repo
-- no changes are required
+- create a new secret from yaml
+- use the isilon-certs.yaml file included in this repo and replace the default yaml template
+- no further changes are required
 
 ## Install Dell CSI Operator using Operator Hub
 - use default options
+- stable, all namespaces, namespace = openshift-operators, automatic approval
+- view operator once complete and confirm status 'succeeded'
 
 ## Create CSIIsilon instance
 - ensure 'isilon' project is selected in the drop down
+- go to CSI PowerScale and create CSIIsilon instance
 - Add the following field values;
+-- Name: isilon
 -- Auth Secret: isilon-creds
 -- TLSCert Secret: isilon-certs-0
 -- Common specifications --> Container Environment vars --> X_CSI_ISI_AUTH_TYPE: 1
