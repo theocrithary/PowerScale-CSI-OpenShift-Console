@@ -96,4 +96,4 @@ ls -al
 
 # Check the volume and snapshot were created successfully
 
-### Login to the PowerScale and confirm the volume / snapshot
+- Login to the PowerScale and confirm the volume / snapshot
