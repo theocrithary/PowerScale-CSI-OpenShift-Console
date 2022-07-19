@@ -94,6 +94,6 @@ ls -al
 - give it a name
 - select the isilon-snapclass created earlier
 
-# Check the snapshot was created successfully
+# Check the volume and snapshot were created successfully
 
 ### Login to the PowerScale and confirm the volume / snapshot
