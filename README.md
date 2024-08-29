@@ -4,10 +4,10 @@
 - https://youtu.be/ChpasqwvGTo
 
 ## Create a new project
-- e.g. isilon
+- e.g. powerscale
 
 ## Create isilon-creds secret
-- ensure the new project 'isilon' is selected when creating the new secrets
+- ensure the new project 'powerscale' is selected when creating the new secrets
 - create a new key/value secret with the secret name = isilon-creds and key = config
 - use the isilon-creds.yaml file included in this repo as reference and paste into the text field
 - edit with your environment details (e.g. endpoint IP address, username, password)
@@ -42,7 +42,7 @@ isilon-node-vdhtz                   2/2     Running   0          65m
 ```
 
 ## Create storage class
-- Name: csi-isilon-sc
+- Name: powerscale
 - Reclaim policy: Delete
 - Volume binding mode: Immediate
 - Provisioner: csi-isilon.dellemc.com
@@ -56,7 +56,7 @@ isilon-node-vdhtz                   2/2     Running   0          65m
 - e.g. test
 
 # Create a new PersistentVolumeClaim
-- StorageClass: csi-isilon-sc
+- StorageClass: powerscale
 - PersistentVolumeClaim name: pvol0
 - Access mode: Single user (RWO)
 - Size: 1GiB
@@ -87,12 +87,12 @@ ls -al
 ```
 
 # Create a volumesnapshot class
-- use the isilon-volumesnapshotclass-v1.yaml included in this repo
+- use the powerscale-volumesnapshotclass-v1.yaml included in this repo
 
 # Create a volume VolumeSnapshot
 - select the pvol0 pvc created earlier
 - give it a name
-- select the isilon-snapclass created earlier
+- select the powerscale-snapclass created earlier
 
 # Check the volume and snapshot were created successfully
 
